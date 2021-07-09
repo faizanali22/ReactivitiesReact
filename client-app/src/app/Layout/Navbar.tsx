@@ -20,4 +20,4 @@ export default function NavBar({openForm}: Props) {
             </Container>
         </Menu>
     )
-}
+} 

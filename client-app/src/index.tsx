@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
-import './app/Layout/styles.css';
-import App from './app/Layout/App';
+import './app/layout/styles.css';
+
 import reportWebVitals from './reportWebVitals';
+import { store, StoreContext } from './app/stores/store';
+import App from './app/layout/App';
 
 ReactDOM.render(
-    <App />,
+  <StoreContext.Provider value={store}>
+    <App />
+  </StoreContext.Provider>,
   document.getElementById('root')
 );
 
